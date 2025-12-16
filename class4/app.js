@@ -38,7 +38,8 @@ let obj = {
 // let {fname, city , country} = obj
 // console.log(fname);
 
-let {fname ,qualification:{academic,course} , ...address } = obj
+let {fname:firstName ,qualification:{academic,course} , ...address } = obj
+console.log(firstName);
 
 // console.log(address,academic);
 
