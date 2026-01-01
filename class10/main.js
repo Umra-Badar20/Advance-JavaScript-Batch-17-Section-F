@@ -40,3 +40,9 @@ myMap.forEach((values, keys)=>{
     console.log("key is" , keys);
     console.log("value is" , values);    
 })
+
+let obje = {
+    a:1,
+    b:2
+}
+console.log(Object.entries(obje));
