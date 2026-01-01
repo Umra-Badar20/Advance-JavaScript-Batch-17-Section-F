@@ -42,7 +42,15 @@
 // let result = numbers.some(num => num > 10)
 // console.log(result);
 
-let numbers = [1,2,[4,[5]]]
-let result = numbers.flat(2)
-console.log(result);
+// let numbers = [1,2,[4,[5]]]
+// let result = numbers.flat(2)
+// console.log(result);
+
+//find()
+
+let array = [5,12,8,130]
+
+let found = array.find(num => num >10)
+
+console.log(found);
 
