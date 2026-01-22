@@ -57,9 +57,39 @@ async function consumedFunc4() {
     console.log(response);
   } catch (error) {
     console.log(error);
-    
   }
 }
 consumedFunc4();
+
+// let promoiseAll = Promise.all([promise1, promise3, promise4])
+let promiseSettled = Promise.allSettled([promise1, promise3, promise4]);
+promiseSettled
+  .then((value) => console.log("Promise all", value))
+  .catch((err) => console.log(err));
+
+
+
+async function consumedFunc5() {
+  try {
+    let response = await fetch("https://dummyjson.com/users");
+    let data = response.json();
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+consumedFunc5();
+
+
+
+fetch("https://dummyjson.com/products")
+.then(res => res.json())
+.then((res) => {
+  console.log(res.products);
+  
+})
+.catch(err => console.log(err))
+
+
 
 
